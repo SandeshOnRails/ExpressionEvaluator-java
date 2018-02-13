@@ -42,7 +42,7 @@ public class Evaluator {
       if ( !( token = this.tokenizer.nextToken() ).equals( " " )) {
         // check if token is an operand
         if (Operand.check(token)) {
-            System.out.println(token);
+           
           operandStack.push(new Operand(token));
         } else {
           if (!Operator.check(token)) {
@@ -59,7 +59,7 @@ public class Evaluator {
 
           Operator newOperator = Operator.checkOperatorType(token);
           
-          System.out.println(token);
+         
 
           // if the token to be read is right paranthesis, solve the entire brace.
 
@@ -99,7 +99,7 @@ public class Evaluator {
               // This means that the first number to be popped is the
               // second operand, not the first operand - see the following code
 
-System.out.println("Executed2");
+
                 Operator oldOpr = operatorStack.pop();
                 Operand op2 = operandStack.pop();
                 Operand op1 = operandStack.pop();
