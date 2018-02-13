@@ -53,5 +53,34 @@ public class EvaluatorUI extends JFrame implements ActionListener {
 
   public void actionPerformed( ActionEvent arg0 ) {
     // You need to fill in this fuction
+
+   
+
+    String eventType = arg0.getActionCommand();
+
+  if(!(eventType.equals("C") ||
+  eventType.equals("CE"))){
+
+    if(eventType == "="){
+
+      if(txField.getText().length() >= 1) {
+        Evaluator evaluator = new Evaluator();
+        txField.setText(Integer.toString(evaluator.eval(txField.getText())));
+      }
+    }
+    else {
+
+
+      txField.setText(txField.getText() + eventType);
+
+    }
+
+    }
+    else {
+    txField.setText("");
   }
+
+     
+  }
+    
 }
