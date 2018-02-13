@@ -68,7 +68,7 @@ public class Evaluator {
             // solve until the left paranthesis is found
             while (!operatorStack.peek().equals(Operator.operatorMap.get("("))) {
                 
-                System.out.println("Executed1");
+                
 
               Operator oldOpr = operatorStack.pop();
               Operand op2 = operandStack.pop();
